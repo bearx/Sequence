@@ -1,4 +1,4 @@
-#include"Sequence.cpp"
+#include"Sequence.h"
 using namespace std;
 int main()
 {
