@@ -71,7 +71,7 @@ string Sequence::longestRepeated()
    	}  
    	char tmp[500001];
    	strncpy(tmp,substr[index],maxlen);
-   	tmp[maxlen+1]='\0';
+   	tmp[maxlen]='\0';
    	string ans=tmp;
    	return ans;
 }
