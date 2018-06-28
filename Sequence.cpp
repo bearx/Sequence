@@ -33,7 +33,7 @@ int Sequence::numberOf(char base)
 }
 string Sequence::longestConsecutive()
 {
-	int cur=0,maxl=0,start=0;
+	int cur=1,maxl=1,start=0;
 	int tmpl=1,st=0;
 	while (cur<int(val.length()))
 	{
@@ -51,6 +51,11 @@ string Sequence::longestConsecutive()
 			else {tmpl=1;st=cur;}
 		}
 		cur++;
+		/*cur+=maxl;
+		char ch=val[cur];
+		int j;
+		for (j=cur-1;j>0 && ch==val[j];j--) tmpl++;
+		st=j+1;*/
 	}
 	return val.substr(start,maxl);
 }
