@@ -42,13 +42,9 @@ string Sequence::longestConsecutive()
 			if (val[cur]==val[cur-1]) 
 			{
 				tmpl++;
-				if (tmpl>maxl)
-				{
-					start=st;
-					maxl=tmpl;
-				}
+				if (tmpl>maxl) start=st,maxl=tmpl;	
 			}
-			else {tmpl=1;st=cur;}
+			else tmpl=1,st=cur;
 		}
 		cur++;
 		/*cur+=maxl;
